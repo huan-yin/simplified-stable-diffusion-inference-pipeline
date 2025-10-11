@@ -66,5 +66,5 @@ with torch.no_grad():
     tensor_image = (tensor_image * 0.5 + 0.5).clamp(0, 1)
     numpy_image = tensor_image.cpu().permute(1, 2, 0).float().numpy()
     pil_image = Image.fromarray((numpy_image * 255).round().astype("uint8"))
-    pil_image.save("/data1/lxy/project/generation/FLUX/inference_test/images/sd15_cat_without_pipline.png")
+    pil_image.save("images/sd15_cat_without_pipline.png")
 
